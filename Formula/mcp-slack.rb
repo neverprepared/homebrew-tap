@@ -5,13 +5,13 @@
 class McpSlack < Formula
   desc "MCP server for Slack — messages, channels, users, files, reactions, pins, and search"
   homepage "https://github.com/neverprepared/mcp-slack"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/neverprepared/mcp-slack/releases/download/v0.1.1/mcp-slack_darwin_arm64.tar.gz"
-    sha256 "057a967f2e3ecd6f461b75c94754962007322164f221adf9165abf61997d4e27"
+    url "https://github.com/neverprepared/mcp-slack/releases/download/v0.1.2/mcp-slack_darwin_arm64.tar.gz"
+    sha256 "428d1051c46af414262121296907d40063094aed509deb342bf9b1df537901d0"
 
     define_method(:install) do
       bin.install "mcp-slack"
