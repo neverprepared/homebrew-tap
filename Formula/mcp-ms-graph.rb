@@ -5,13 +5,13 @@
 class McpMsGraph < Formula
   desc "MCP server for Microsoft Graph — Teams chat, Outlook mail, and Calendar"
   homepage "https://github.com/neverprepared/mcp-ms-graph"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/neverprepared/mcp-ms-graph/releases/download/v0.1.5/mcp-ms-graph_darwin_arm64.tar.gz"
-    sha256 "39359e62afaa24ea24ff6bc10594d62986f0fdde25bcbdcaba6d0935f2419860"
+    url "https://github.com/neverprepared/mcp-ms-graph/releases/download/v0.1.6/mcp-ms-graph_darwin_arm64.tar.gz"
+    sha256 "84bfa2cfda59067736772e43596173cad03ebcfec8053c5b1f78fd583cf5b3e5"
 
     define_method(:install) do
       bin.install "mcp-ms-graph"
