@@ -5,13 +5,13 @@
 class Pbrainctl < Formula
   desc "phantom-brain (pbrain) — MCP server + daemon for durable, validated long-term memory"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.1.0"
+  version "3.2.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/neverprepared/phantom-brain/releases/download/v3.1.0/pbrainctl_darwin_arm64.tar.gz"
-    sha256 "577cede18d264f6252a601b47313554407e9192af0e49fdf3233236578948fb6"
+    url "https://github.com/neverprepared/phantom-brain/releases/download/v3.2.0/pbrainctl_darwin_arm64.tar.gz"
+    sha256 "fab89c66589ba15c7c3f1d69ba8f26fb7772faa96639f5f7b673f6b87cac1412"
 
     define_method(:install) do
       bin.install "pbrainctl"
