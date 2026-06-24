@@ -9,21 +9,25 @@ class Pbrainctl < Formula
   version "3.3.0"
   license "MIT"
 
-  # Use  (not /): nested
+  # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
   # on-arch blocks don't register url/sha256 at spec resolution,
   # so brew reports "formula requires at least a URL". This is the
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/neverprepared/phantom-brain/releases/download/v3.3.0/pbrainctl_darwin_arm64.tar.gz"
-      sha256 "b134511b8c4bd969100dee9e23f3b20ba911154876554c7404a2809e55551b54"
+      sha256 "2674157831362685010788b826dc2bcd2ea7596faa9c76433c1e7d0e33e0ae50"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/neverprepared/phantom-brain/releases/download/v3.3.0/pbrainctl_linux_amd64.tar.gz"
-      sha256 "a9f7b2c5b02b62cfd06da3025fd2a817014e03c8083f4382c6c81fc26da69e03"
+      sha256 "aee9ba5252b6bf4ba445336460dde3c58136e993bec2cb696effd4bf05bc6503"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.3.0/pbrainctl_linux_arm64.tar.gz"
+      sha256 "7d160f1fe6503a5a16fed0d41405822fda07642636ea8bb85738a136fe3b19b1"
     end
   end
 
