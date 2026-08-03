@@ -6,7 +6,7 @@
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.18.0"
+  version "3.19.0"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -15,19 +15,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.18.0/pbrainctl_darwin_arm64.tar.gz"
-      sha256 "802e62f262cded55e8660e779093bc652732a6578e1b87e459341d4892abd7a6"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.19.0/pbrainctl_darwin_arm64.tar.gz"
+      sha256 "6f7472e23154a03b1dc89c6fb5e1b680337e1618e5edefd8d3f9067d0f30cb9a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.18.0/pbrainctl_linux_amd64.tar.gz"
-      sha256 "89adb36deccefddbf70d5545ea75e521b270556484e59b890eaec6b4e86f0cd4"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.19.0/pbrainctl_linux_amd64.tar.gz"
+      sha256 "a47426c0bcaaabbf468f7743afccdf66d10a56c589ee13cb1f1c8621975c5a89"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.18.0/pbrainctl_linux_arm64.tar.gz"
-      sha256 "3a5943aacbe557afcab22e4d9b4ca87890b8eb982bdc9ceb7bda73cbbf5271da"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.19.0/pbrainctl_linux_arm64.tar.gz"
+      sha256 "b961f4ca359a785808876f5b0c2d3bdf3bf5858e7aef2b04d91ee261e6dac1e2"
     end
   end
 
