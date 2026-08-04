@@ -5,13 +5,13 @@
 class McpKroki < Formula
   desc "MCP server: diagram markup -> images via a Kroki instance"
   homepage "https://github.com/neverprepared/mcp-kroki"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/neverprepared/mcp-kroki/releases/download/v1.0.1/mcp-kroki_darwin_arm64.tar.gz"
-    sha256 "72d428a089b49440f4e97f6158a861609801926fba13bd86f6a54c8542fa09fa"
+    url "https://github.com/neverprepared/mcp-kroki/releases/download/v1.0.2/mcp-kroki_darwin_arm64.tar.gz"
+    sha256 "ed5d4c1093cd3c38cb55845de8b314e483a93554b0d08eea9d0809f9f13b2777"
 
     define_method(:install) do
       bin.install "mcp-kroki"
