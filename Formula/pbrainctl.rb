@@ -16,18 +16,18 @@ class Pbrainctl < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/neverprepared/phantom-brain/releases/download/v3.22.0/pbrainctl_darwin_arm64.tar.gz"
-      sha256 "de807624be33920a6c27a103c00252647a58799b4a584932fd4c756bbe8a0ed3"
+      sha256 "b95328a19301d847bc7a228d990c53f826a248c81281fcd4e946c589f9ca3512"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/neverprepared/phantom-brain/releases/download/v3.22.0/pbrainctl_linux_amd64.tar.gz"
-      sha256 "07e8c6db92f28fa216a30627f35a9ca4869923d18c00f1d8253c3617499131a7"
+      sha256 "96ceda3947adae5bed92d0960d771679725d4d0f0727ae2ee9c537f46bce4e1b"
     end
     if Hardware::CPU.arm?
       url "https://github.com/neverprepared/phantom-brain/releases/download/v3.22.0/pbrainctl_linux_arm64.tar.gz"
-      sha256 "1de648cc600e788c749115e3cc1dce5149bfa7a4151e54d5568c7eee880da9db"
+      sha256 "feec2f45b9eafd3520dd9387cbb277073507ce9546dfd927d6ccf2d420136fb4"
     end
   end
 
