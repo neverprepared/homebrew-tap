@@ -6,28 +6,28 @@
 class Prouterctl < Formula
   desc "Thin CLI client for the phantom-router orchestration API"
   homepage "https://github.com/neverprepared/prouterctl"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/prouterctl/releases/download/v0.1.0/prouterctl_darwin_arm64.tar.gz"
-      sha256 "cf4746364cb6f4f9e8246e313de3a9c899a358f7e2207b7399be22378249fbcb"
+      url "https://github.com/neverprepared/prouterctl/releases/download/v0.2.0/prouterctl_darwin_arm64.tar.gz"
+      sha256 "3163f2eec357f1aecfa469b57b66a6d31f8b37545af6efc2988efa21b7bf7656"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/prouterctl/releases/download/v0.1.0/prouterctl_darwin_amd64.tar.gz"
-      sha256 "ab43e51a382f5d61bb10f07006308aa6378fbc10d7076dc6563cebb2799933b0"
+      url "https://github.com/neverprepared/prouterctl/releases/download/v0.2.0/prouterctl_darwin_amd64.tar.gz"
+      sha256 "90ee3bec437a687c611f4aafbe2a487b8b4ec8f9ab5c0adafaa185ba9fe068df"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/prouterctl/releases/download/v0.1.0/prouterctl_linux_amd64.tar.gz"
-      sha256 "51c2fd5dc12d8d207d183cb2dc9e42c4af76cb49b523570f4092e401e53df45f"
+      url "https://github.com/neverprepared/prouterctl/releases/download/v0.2.0/prouterctl_linux_amd64.tar.gz"
+      sha256 "72a298f924eabeb623bd708da2b3a7a33a192016af93a11fc2c4d34eec43f037"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/prouterctl/releases/download/v0.1.0/prouterctl_linux_arm64.tar.gz"
-      sha256 "5e0bbe67824f532dcf45af6f9f8fcba4073fb86048042355eef6bfacba8394af"
+      url "https://github.com/neverprepared/prouterctl/releases/download/v0.2.0/prouterctl_linux_arm64.tar.gz"
+      sha256 "ca4c6bda7f306005eb1f40ae3e0f22d3b5a8b55ae5fb3656035b1c07ba17b917"
     end
   end
 
