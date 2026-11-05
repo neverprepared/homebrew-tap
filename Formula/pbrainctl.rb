@@ -67,7 +67,7 @@ end
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.29.0"
+  version "3.30.0"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -76,19 +76,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.29.0/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "1c548e07b819c1e32d1d852fea63593cf8a85a96e3f40167cafc3df3ab01b5e9"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.30.0/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "91fab3920a8fa820b2408d73a5b09e30675872e67041365b003bfba9b3462244"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.29.0/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "66bd631e8c46a7c6ec465f3dc99f8cb7e59b922c831e6da36a1290fdcb955e8f"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.30.0/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f31794296fd820d83146cb5a6e5fe6995fd47f46846e47a181486a048a9deb64"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.29.0/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "c3e23e5eff6402368f97c20bb81f84d723314dc9d89256f5f356a266bad9c2c0"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.30.0/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "310596445a442abe91cd596babf3cfc6a9e39a7b0918cd1e723168b0459b9921"
     end
   end
 
