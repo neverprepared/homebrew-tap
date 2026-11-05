@@ -7,11 +7,11 @@
 require "download_strategy"
 
 # Download a release asset from a PRIVATE GitHub repo. The plain
-# github.com/.../releases/download/... URL 404s for private repos (it needs a
-# web session, not a token), so resolve the asset id via the API and pull the
-# api.github.com/.../releases/assets/<id> endpoint with Accept: octet-stream +
-# the HOMEBREW_GITHUB_API_TOKEN. The built-in strategy of this name was removed
-# from Homebrew, so it is vendored here.
+# github.com/.../releases/download/... URL 404s for private repos (it
+# needs a web session, not a token), so resolve the asset id via the
+# API and pull the api.github.com/.../releases/assets/<id> endpoint
+# with Accept: octet-stream + HOMEBREW_GITHUB_API_TOKEN. The built-in
+# strategy of this name was removed from Homebrew, so it is vendored.
 class GitHubPrivateRepositoryReleaseDownloadStrategy < CurlDownloadStrategy
   require "utils/github"
 
@@ -67,7 +67,7 @@ end
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.25.0"
+  version "3.29.0"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -76,19 +76,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.25.0/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7270171d8242e47d3dc45a484d5e1e792da232fd6923904ab701bdceecd49abf"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.29.0/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "1c548e07b819c1e32d1d852fea63593cf8a85a96e3f40167cafc3df3ab01b5e9"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.25.0/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "699ebc96bcefcde487665c78f16d077a6d43ca51f6bbb79203c6228b0644192f"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.29.0/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "66bd631e8c46a7c6ec465f3dc99f8cb7e59b922c831e6da36a1290fdcb955e8f"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.25.0/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "6d6a6bfc75c27f2909eef90c6996fd5f71ee078d8bfaa3969d0d0273c53d0b3c"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.29.0/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c3e23e5eff6402368f97c20bb81f84d723314dc9d89256f5f356a266bad9c2c0"
     end
   end
 
