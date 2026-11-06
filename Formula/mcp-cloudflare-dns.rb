@@ -5,13 +5,13 @@
 class McpCloudflareDns < Formula
   desc "MCP server for Cloudflare DNS - list, create, update, and delete DNS records"
   homepage "https://github.com/neverprepared/mcp-cloudflare-dns"
-  version "1.3.0"
+  version "main"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/neverprepared/mcp-cloudflare-dns/releases/download/v1.3.0/mcp-cloudflare-dns_darwin_arm64.tar.gz"
-    sha256 "c9950ed482ec0660ee0b4f1614e2553b4902683de0a52525a7dea6f0e01f5d6c"
+    url "https://github.com/neverprepared/mcp-cloudflare-dns/releases/download/vmain/mcp-cloudflare-dns_darwin_arm64.tar.gz"
+    sha256 "631db230d8448c86928fc86e4f0d69fcedfa418e55dd77940b40bea615436dde"
 
     define_method(:install) do
       bin.install "mcp-cloudflare-dns"
