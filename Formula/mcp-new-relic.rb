@@ -5,13 +5,13 @@
 class McpNewRelic < Formula
   desc "MCP server for New Relic - NRQL queries, alerts, dashboards, and account metrics"
   homepage "https://github.com/neverprepared/mcp-new-relic"
-  version "main"
+  version "0.1.9"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/neverprepared/mcp-new-relic/releases/download/vmain/mcp-new-relic_darwin_arm64.tar.gz"
-    sha256 "2d814786888ccc1a70b60e6e4c17e68d20b4a68187c7beb9660ed708b2666e5b"
+    url "https://github.com/neverprepared/mcp-new-relic/releases/download/v0.1.9/mcp-new-relic_darwin_arm64.tar.gz"
+    sha256 "1edbbd95ceed253779d0ab1a4b44d10de76fc5573c88bc409111f2f791dbbacb"
 
     define_method(:install) do
       bin.install "mcp-new-relic"
