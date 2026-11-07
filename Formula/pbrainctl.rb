@@ -67,7 +67,7 @@ end
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.31.1"
+  version "3.31.2"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -76,19 +76,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.1/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "6723a8aa339ea238ee33e4e9f842977625b0756f98d513239a07b3519d54ec09"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.2/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "84d2e9cd6f118cb1958b6e3b6bf6bf3887f2934509716bcd6b628d6733a7c3c1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.1/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "8512461c8503905dfe9ab5444458fe9fec7c5dc116e8cd10abd19868f3e5416c"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.2/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ab0cba1e4baee8670e36fa4774c563bdb92c5a0a1362838cc912046ee5e5c6a7"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.1/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "287cc1ee8f652f7b06f4e8234f1e86d820bc13c9cadd3a006a821ca56ea50ee5"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.2/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "3a6c712530cfe3dfb3970bb3b993f216c713df18f4d6600d9f25ac1cc3d0b10c"
     end
   end
 
