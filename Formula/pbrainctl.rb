@@ -67,7 +67,7 @@ end
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.31.2"
+  version "3.31.3"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -76,19 +76,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.2/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "84d2e9cd6f118cb1958b6e3b6bf6bf3887f2934509716bcd6b628d6733a7c3c1"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.3/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "2b4607250da5156501e13d789c6a49f302fa7cf669be8f46bfa61fa81ba70cd8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.2/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ab0cba1e4baee8670e36fa4774c563bdb92c5a0a1362838cc912046ee5e5c6a7"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.3/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "cf68e57b6a3324814d54b63724fae9fb206cde043d671db68d00308bb2734ff7"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.2/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "3a6c712530cfe3dfb3970bb3b993f216c713df18f4d6600d9f25ac1cc3d0b10c"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.31.3/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f9fa88c066f3a2940331b86b608f2b38dd9a87f1299c4feed6b2dd7b97720bed"
     end
   end
 
