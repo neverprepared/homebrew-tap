@@ -67,7 +67,7 @@ end
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.32.0"
+  version "3.33.0"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -76,19 +76,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.32.0/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "d24543864ef58cb289f74460e0df026b6362583221d431dcaf608e1c4dd1a26f"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.33.0/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "d4781e01a93b035ae1138f7accaa2d44144ff02437594930a6757deb61b5188d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.32.0/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "465c988ad7324bd7a9595c10eef02f02d5b0a6724135e1f62ce3991ba4226d3b"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.33.0/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "1991c63a3d89794a20a70959012b3ae61af737fe290621337984049ead99936d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.32.0/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4f5c1b0120f942208de9421641519fce8f646253f38d1050dc202fc78f78f23f"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.33.0/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "a5e77836aa79982f712801e27c761957254814c993ec2320cc6ec75c0fe80322"
     end
   end
 
