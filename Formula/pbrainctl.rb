@@ -67,7 +67,7 @@ end
 class Pbrainctl < Formula
   desc "MCP server + daemon for durable, validated long-term memory (phantom-brain)"
   homepage "https://github.com/neverprepared/phantom-brain"
-  version "3.34.1"
+  version "3.34.2"
   license "MIT"
 
   # Use `if Hardware::CPU.arm?` (not `on_arm`/`on_intel`): nested
@@ -76,19 +76,19 @@ class Pbrainctl < Formula
   # GoReleaser-proven pattern (see mcp-slack.rb in the tap).
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.34.1/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "b362f7bfe22734983511100123c23e0daa204dc0c1d96b3a894d1141f42eef3e"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.34.2/pbrainctl_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "bbce3aae584105a928579396f727570ddff4895f77df3b91868c8d34a95175f2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.34.1/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "931c4bca0feeade00a8c68e436b854b649d646877f212d5f0dbd119e2faceac6"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.34.2/pbrainctl_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "6cd64b208a48539e98fefa9cbe071840e6d9c1f18ed4652543dc014485c3386a"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.34.1/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "616f27e1c9d87b8461429d3b6972f2cc217e9971355a069a40ac0c9bda9df028"
+      url "https://github.com/neverprepared/phantom-brain/releases/download/v3.34.2/pbrainctl_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "1240293be323a59676fbcb46a6426fc7339df7e6e06224c7802e1b88f275a7b2"
     end
   end
 
